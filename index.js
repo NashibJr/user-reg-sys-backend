@@ -1,11 +1,13 @@
 import express from "express";
 import { config } from "dotenv";
 import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
 import userRoute from "./src/routes/userRoute.js";
 
 config();
 
 const app = express();
+app.use(cookieParser());
 
 const main = async () => {
   try {
