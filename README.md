@@ -4,7 +4,10 @@
 
 2. change the directory of your computer to the application's directory
 3. install the dependencies by running, npm install
-4. start the application by running, npm run dev
+4. open the application in vs code or any other text editor, create a .env file at the root of the app and then copy and paste these lines,
+   DATABASE_URL = mongodb://127.0.0.1:27017/userRegSys
+   JWT_SECRET = bnfsw32jhbnx@yu&nhh003ubhhsxxashghwj!9
+5. start the application by running, npm run dev
 
 ## Libraries used.
 
