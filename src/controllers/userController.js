@@ -50,7 +50,7 @@ const userController = {
       const token = req.cookies?.token;
       if (!token) {
         return resp.status(404).json({
-          message: "token not found",
+          error: "token not found",
         });
       }
 
