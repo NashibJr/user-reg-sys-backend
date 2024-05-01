@@ -9,7 +9,7 @@ const userService = {
 
       if (exists) {
         return {
-          message: "Username already taken, please use a different username",
+          error: "Username already taken, please use a different username",
         };
       }
 
@@ -27,7 +27,6 @@ const userService = {
       };
     } catch (error) {
       return {
-        message: "An error has occured",
         error: error?.message,
       };
     }
@@ -37,7 +36,7 @@ const userService = {
       let exists = await User.findOne({ username: userData.username });
       if (!exists) {
         return {
-          message: "User with this username does not exist",
+          error: "User with this username does not exist",
         };
       }
 
@@ -47,7 +46,7 @@ const userService = {
       );
       if (!isPasswordCorrect) {
         return {
-          message: "Your password is incorrect, please check and try again",
+          error: "Your password is incorrect, please check and try again",
         };
       }
 
@@ -66,7 +65,6 @@ const userService = {
       };
     } catch (error) {
       return {
-        message: "An error has occured",
         error: error?.message,
       };
     }
@@ -81,7 +79,6 @@ const userService = {
       };
     } catch (error) {
       return {
-        message: "An error has occured",
         error: error?.message,
       };
     }
@@ -95,7 +92,6 @@ const userService = {
       return rest;
     } catch (error) {
       return {
-        message: "An error has occured",
         error: error?.message,
       };
     }
